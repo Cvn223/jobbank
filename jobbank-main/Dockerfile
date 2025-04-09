@@ -1,11 +1,6 @@
-ROM node:23-alpine
+FROM nginx:latest
 
-WORKDIR /src
-COPY validate.json payRateCal.json /src/
-RUN npm install --production
 
-COPY . /src
+COPY . /usr/share/nginx/html/
 
-EXPOSE 3000
-
-CMD ["npm", "start"]
+EXPOSE 80
