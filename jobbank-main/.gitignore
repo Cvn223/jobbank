@@ -1,4 +1,0 @@
-#ignore all files in node_modules
-**/node_modules
-**/coverage
-#payRateCal.js
