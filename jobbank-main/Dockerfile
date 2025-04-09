@@ -1,6 +1,11 @@
-FROM nginx:latest
+ROM node:23-alpine
 
+WORKDIR /src
+COPY package.json package-lock.json /src/
+RUN npm install --production
 
-COPY . /usr/share/nginx/html/
+COPY . /src
 
-EXPOSE 80
+EXPOSE 3000
+
+CMD ["npm", "start"]
