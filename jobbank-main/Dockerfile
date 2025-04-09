@@ -1,7 +1,7 @@
 ROM node:23-alpine
 
 WORKDIR /src
-COPY package.json package-lock.json /src/
+COPY validate.json payRateCal.json /src/
 RUN npm install --production
 
 COPY . /src
